@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectHeader from "../components/ProjectHeader.astro";
+import NextProject from "../components/NextProject.astro";
+import Section from "../components/Section.astro";
+import Figure from "../components/Figure.astro";
+import { bySlug } from "../data/projects";
+
+const project = bySlug("verve-motion");
+---
+<BaseLayout title={project.pageTitle} current="work">
+<ProjectHeader project={project} />
+
+<Section title="The suit" meta="4 main components · 3 auxiliary">
+<div class="prose"><p>The V4 Safe Lift Suit has four main components and three small auxiliary components.</p></div>
+<div class="row" style="margin-top:2rem">
+<div>
+<Figure
+  src="/img/verve-lift-side.jpg"
+  alt="Worker lifting a box while wearing the Safe Lift Suit, side view"
+  width={332} height={547} maxWidth="420px"
+  rings={[{ n: "1", left: "66%", top: "21%" }]}
+/>
+</div>
+<div>
+<ol class="steps custom">
+<li data-n="1"><div><h3>Actuator and back panel</h3><p>The actuator lives inside the back panel, under a softgoods cover that protects it from the environment and conceals our IP. It holds a motor driven by proprietary software. The software locates the user in space using IMUs on the center back and behind each thigh, and adapts in real time to assist the lift.</p></div></li>
+<li data-n="2"><div><h3>Shoulder straps</h3><p>The shoulder straps detach from the back panel so the suit can be adjusted to different user heights.</p></div></li>
+<li data-n="3–4"><div><h3>Thigh wraps</h3><p>A wrap encircles each thigh and routes cording from the main actuator into an IMU unit at the center back of the thigh. The wraps come in multiple sizes and adjust with a lacing system.</p></div></li>
+</ol>
+</div></div>
+<div class="figs two" style="margin-top:2.5rem">
+<Figure
+  src="/img/verve-front.jpg"
+  alt="Front view of the suit showing the shoulder straps"
+  width={234} height={376} maxWidth="360px"
+  rings={[{ n: "2", left: "36%", top: "42%" }]}
+>
+  <Fragment slot="caption"><b>2</b> Shoulder straps detach from the back panel.</Fragment>
+</Figure>
+<Figure
+  src="/img/verve-back.jpg"
+  alt="Back view of the suit showing the thigh wraps and cording"
+  width={400} height={384} maxWidth="460px"
+  rings={[{ n: "3", left: "29%", top: "87%" }]}
+>
+  <Fragment slot="caption"><b>3–4</b> Thigh wraps with cording routed to the IMU units.</Fragment>
+</Figure>
+</div>
+</Section>
+
+<Section title="Hardware on the force path">
+<div class="prose"><p>Both of these fasteners sit on the force path of the suit, so a failure here is a failure of the product.</p></div>
+<div class="row" style="margin-top:2rem">
+<div class="prose"><h3>Shoulder strap to battery pod buckle</h3>
+<p>The male buckles have a secondary locking nub that nestles into a divot in the female buckle. I tested riveted and sewn samples to confirm that this locking feature actually increases the breaking strength of the connection.</p>
+<p>The locking nub broke off during testing. This was the common failure across all samples.</p></div>
+<Figure
+  src="/img/verve-buckle-test.jpg"
+  alt="Test slide showing riveted and sewn buckle samples and the broken locking nub"
+  width={729} height={369} pad
+  caption="Riveted and sewn buckle samples after pull testing."
+/>
+</div>
+<div class="row flip" style="margin-top:3rem">
+<div class="prose"><h3>Steel to aluminum G-hooks</h3>
+<p>G-hooks that had been in the field for a long time were rusting. The V4 and V4A hooks are powder-coated steel and rust when exposed to moisture or laundering. We wanted to switch to aluminum, which does not rust, but we were concerned about the tensile strength of the nominated part.</p>
+<p>Tensile testing confirmed the aluminum hook meets our spec. It is weaker than steel, but 400 N is still stronger than necessary.</p>
+<div class="table-wrap"><table class="spec">
+<caption>Tensile test results</caption>
+<thead><tr><th>Sample</th><th class="num">Test 1</th><th class="num">Test 2</th></tr></thead>
+<tbody>
+<tr class="pick"><td>Aluminum G-hook<span class="flag">Selected</span></td><td class="num">468 N</td><td class="num">490 N</td></tr>
+<tr><td>Steel G-hook (V4/V4A)</td><td class="num">1004 N</td><td class="num">1204 N</td></tr>
+</tbody></table></div></div>
+<Figure
+  src="/img/verve-ghook-test.jpg"
+  alt="Rusted steel G-hooks next to aluminum and steel hooks after tensile testing"
+  width={727} height={333} pad
+  caption="Rust on field-returned steel hooks, and both hook types after tensile testing."
+/>
+</div>
+</Section>
+
+<Section title="Abrasion testing" meta="EN-388 · Martindale">
+<div class="prose"><p>The cover fabric was wearing through in the field. I ran abrasion tests using an adapted version of EN-388 on a Martindale abrasion tester to find a more durable replacement. After testing and inspection, we moved to 840D Nylon Cordura.</p>
+<p>The newest development wraps a composite material around the top of the device. Composites are generally more durable, but the choice of top, middle and bottom layers depends on the use case. I tested two varieties of X-Pac, a laminated composite with an internal Kevlar scrim.</p></div>
+<div class="table-wrap"><table class="spec">
+<caption>Martindale abrasion results</caption>
+<thead><tr><th>Material</th><th>Used on</th><th>Result</th><th class="num">EN-388 level</th></tr></thead>
+<tbody>
+<tr><td>600D Polyester</td><td>Cover, V4 / V4A (baseline)</td><td>Wear through at 8,000 cycles</td><td class="num">4</td></tr>
+<tr><td>500D Nylon Robic</td><td>Cover, V5 P2–P3</td><td>Slight wear through at 8,000 cycles</td><td class="num">4</td></tr>
+<tr class="pick"><td>840D Nylon Cordura<span class="flag">Selected</span></td><td>Cover, V5 P4 onward</td><td>No wear through at 8,000 cycles</td><td class="num">4</td></tr>
+<tr><td>Lab custom X-Pac</td><td>Ear wraps, V5 P1–P3</td><td>Wear through at 2,000 cycles</td><td class="num">3</td></tr>
+<tr class="pick"><td>RX36 X-Pac<span class="flag">Selected</span></td><td>Ear wraps, V5 P4 onward</td><td>Slight wear through at 8,000 cycles</td><td class="num">4</td></tr>
+</tbody></table></div>
+<div class="figs two">
+<Figure
+  src="/img/verve-abrasion-canvas.jpg"
+  alt="Cover wear in the field and abrasion test swatches for three canvas materials"
+  width={719} height={376} pad
+  caption="Cover canvas: field wear pattern and test swatches."
+/>
+<Figure
+  src="/img/verve-abrasion-xpac.jpg"
+  alt="Field and drop test damage on ear wraps, and abrasion swatches for two X-Pac materials"
+  width={720} height={387} pad
+  caption="Ear wraps: field and drop test damage, and X-Pac swatches."
+/>
+</div>
+</Section>
+
+<NextProject slot="next" from={project.slug} />
+</BaseLayout>

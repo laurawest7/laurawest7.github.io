@@ -1,0 +1,13 @@
+---
+interface Props {
+  /** Project pages mark Work as the current section; the home page does not. */
+  current?: "work";
+}
+const { current } = Astro.props;
+---
+<header class="topbar"><div class="wrap">
+<a class="wordmark" href="/">Laura West</a>
+<nav class="topnav" aria-label="Main">
+<a href="/#work" aria-current={current === "work" ? "page" : undefined}>Work</a>
+<a href="/#capabilities">Capabilities</a>
+</nav></div></header>

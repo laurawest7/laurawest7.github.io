@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import TitleBlock from "../components/TitleBlock.astro";
+import WorkCard from "../components/WorkCard.astro";
+import { projects } from "../data/projects";
+
+const caps: { heading: string; items: { slug: string; text: string }[] }[] = [
+  {
+    heading: "Testing and validation",
+    items: [
+      { slug: "verve-motion", text: "Tensile testing of force-path hardware" },
+      { slug: "verve-motion", text: "EN-388 abrasion on a Martindale tester" },
+      { slug: "thule-sapling", text: "Wear testing and root-cause analysis" },
+      { slug: "trusst", text: "Material selection for wash and dry durability" },
+    ],
+  },
+  {
+    heading: "Manufacturing",
+    items: [
+      { slug: "trusst", text: "Injection molding tooling and over-molding" },
+      { slug: "trusst", text: "Foam cup molding and die-cut trimming" },
+      { slug: "trusst", text: "Cut and sew with structured components" },
+      { slug: "thule-approach", text: "Flat felled, seam-taped construction" },
+    ],
+  },
+  {
+    heading: "Documentation and supply",
+    items: [
+      { slug: "thule-sapling", text: "Critical to Quality documents for factory QC" },
+      { slug: "lasell-footwear", text: "Tech packs and FOB costing" },
+      { slug: "thule-sapling", text: "Costed options for late-stage fixes" },
+      { slug: "verve-motion", text: "Supplier collaboration on material changes" },
+    ],
+  },
+];
+---
+<BaseLayout title="Laura West · Product developer">
+<section class="mat"><div class="ruler"></div>
+<div class="wrap hero"><div class="hero-grid">
+<div>
+<p class="eyebrow">Product developer</p>
+<h1>Laura West</h1>
+<p class="lede">I develop soft goods that carry load: wearable robotics, technical carry and structured apparel.</p>
+<p>My work runs from prototyping and lab testing through supplier development, tech packs and production QC.</p>
+</div>
+<TitleBlock rows={[
+  ["Now", "Verve Motion, wearable robotics"],
+  ["Before", "Product Developer, Thule"],
+  ["Founded", "Trusst Lingerie"],
+  ["Materials", "Technical textiles, X-Pac, nylon, TPU, EVA and PU foams, aluminum"],
+]} />
+</div></div></section>
+
+<Section id="work" title="Selected work" meta={`${projects.length} projects`}>
+<div class="work">
+{projects.map((p) => <WorkCard project={p} />)}
+</div>
+</Section>
+
+<Section id="capabilities" title="Capabilities" meta="Drawn from the projects above">
+<div class="caps">
+{caps.map((group) => (
+  <div class="cap"><h3>{group.heading}</h3><ul>
+  {group.items.map((item) => <li><a href={`/${item.slug}/`}>{item.text}</a></li>)}
+  </ul></div>
+))}
+</div>
+</Section>
+</BaseLayout>

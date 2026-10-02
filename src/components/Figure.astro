@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** Inset the image inside the frame — used for tech-pack sheets and test slides. */
+  pad?: boolean;
+  /** e.g. "420px" */
+  maxWidth?: string;
+  /** Red annotation rings, positioned as a percentage of the frame. */
+  rings?: { n: string; left: string; top: string }[];
+  /** Plain-text caption. For a caption with markup, use the `caption` slot instead. */
+  caption?: string;
+}
+const { src, alt, width, height, pad, maxWidth, rings = [], caption } = Astro.props;
+const hasCaption = caption !== undefined || Astro.slots.has("caption");
+---
+<figure style={maxWidth ? `max-width:${maxWidth}` : undefined}>
+<div class={pad ? "frame pad" : "frame"}>
+<img src={src} alt={alt} width={width} height={height} />
+{rings.map((r) => (
+  <div class="ring" style={`left:${r.left};top:${r.top}`} aria-hidden="true"><span>{r.n}</span></div>
+))}
+</div>
+{hasCaption && <figcaption>{caption}<slot name="caption" /></figcaption>}
+</figure>

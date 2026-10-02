@@ -1,0 +1,16 @@
+---
+import TitleBlock from "./TitleBlock.astro";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+---
+<section class="mat"><div class="ruler"></div>
+<div class="wrap proj-head">
+<p class="crumb"><a href="/#work">Work</a> / {project.company}</p>
+<div class="proj-grid">
+<div><p class="eyebrow">{project.company}</p><h1>{project.title}</h1><p class="lede">{project.lede}</p></div>
+<TitleBlock rows={project.spec} />
+</div></div></section>

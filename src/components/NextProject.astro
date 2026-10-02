@@ -1,0 +1,10 @@
+---
+import { href, nextOf } from "../data/projects";
+
+interface Props {
+  /** Slug of the project this link sits at the bottom of. */
+  from: string;
+}
+const next = nextOf(Astro.props.from);
+---
+<div class="wrap next"><a href={href(next)}><span class="k">Next project · {next.company}</span><span class="t">{next.title} →</span></a></div>

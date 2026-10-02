@@ -1,0 +1,20 @@
+---
+import { href } from "../data/projects";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+const { card } = project;
+---
+<a class={card.feature ? "card feature" : "card"} href={href(project)}>
+<div class={card.contain ? "card-img contain" : "card-img"}>
+{card.images.map((img) => (
+  <img src={img.src} alt={img.alt} width={img.width} height={img.height} style={img.style} />
+))}
+</div>
+<div class="card-body"><span class="card-co">{card.co}</span><h3>{project.title}</h3>
+<p>{card.blurb}</p>
+<ul class="tags">{card.tags.map((t) => <li>{t}</li>)}</ul>
+<span class="more">View project →</span></div></a>

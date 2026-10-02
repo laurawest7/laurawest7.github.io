@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectHeader from "../components/ProjectHeader.astro";
+import NextProject from "../components/NextProject.astro";
+import Section from "../components/Section.astro";
+import Figure from "../components/Figure.astro";
+import { bySlug } from "../data/projects";
+
+const project = bySlug("thule-sapling");
+---
+<BaseLayout title={project.pageTitle} current="work">
+<ProjectHeader project={project} />
+
+<Section title="The product">
+<div class="figs two">
+<Figure src="/img/sapling-hero.jpg" alt="Smiling baby seated in the Thule Sapling carrier" width={389} height={432} maxWidth="420px" />
+<Figure src="/img/sapling-back.jpg" alt="Thule Sapling from behind showing the aluminum frame and kickstand" width={383} height={421} maxWidth="420px" />
+</div>
+<div class="figs two">
+<Figure
+  src="/img/sapling-sunshade.jpg"
+  alt="Sapling with sunshade deployed and folded back"
+  width={390} height={260}
+  caption="The UPF 50 sunshade folds back or removes completely. It is built from spring steel, fiberglass rod and technical fabrics."
+/>
+<Figure
+  src="/img/sapling-seat.jpg"
+  alt="Removable child seat and drool pad"
+  width={438} height={292}
+  caption="The child seat and drool pad remove for machine washing."
+/>
+</div>
+</Section>
+
+<Section title="Tracking down a squeak">
+<div class="prose"><p>Technical backpacks have a frame inside the back panel, usually stainless steel or aluminum, that keeps the lumbar support tensioned while allowing airflow. In one of our last sample rounds we heard a squeak from the bottom of the bag. We had two suspects:</p>
+<ol class="steps"><li><div>The plastic component where the back panel frame is inserted.</div></li>
+<li><div>The PU coating on the back of the fabric rubbing against the aluminum frame while the bag moves.</div></li></ol>
+<p style="margin-top:1rem">After extended wear testing we found the source: the PU coating rubbing against the aluminum frame. This was a last-minute problem, so I costed each fix and laid out the pros and cons.</p></div>
+<div class="figs two">
+<Figure
+  src="/img/sapling-frame.jpg"
+  alt="Sapling outline with the back panel frame profile drawn in red"
+  width={281} height={281} maxWidth="380px"
+  caption="The red line is the profile of the back panel frame inside the bag."
+/>
+<Figure
+  src="/img/sapling-frame-interface.jpg"
+  alt="Inside the bag, the plastic component where the aluminum frame inserts"
+  width={292} height={297} maxWidth="380px"
+  caption="The plastic component and aluminum frame interface."
+/>
+</div>
+<div class="options">
+<div class="option"><span class="tag">Option 1</span><h3>Anodize the frame and add nonwoven to the back of the panel</h3>
+<dl><dt>Pros</dt><dd><ul><li>Adds strength to seams</li><li>Reduces sound</li><li>No additional materials for chemical testing</li><li>No visible change to the consumer</li></ul></dd>
+<dt>Cons</dt><dd><ul><li>Adds $0.11 in material and labor</li></ul></dd></dl></div>
+<div class="option pick"><span class="tag">Option 2 · Recommended</span><h3>Anodize the frame and reverse the panel so the PU side faces out</h3>
+<dl><dt>Pros</dt><dd><ul><li>Reduces noise</li><li>No additional materials for chemical testing</li><li>Consumption and costing stay the same</li></ul></dd>
+<dt>Cons</dt><dd><ul><li>The back side of the fabric is visible inside the storage area</li></ul></dd></dl></div>
+</div>
+</Section>
+
+<Section title="Critical to quality" meta="95 items">
+<div class="prose"><p>This is a product for children, so child safety and product integrity came first. I wrote a Critical to Quality document that defined what our factory QC and internal Thule QC had to check during and after production. It lists 95 critical items. A few are shown here; the rest are confidential.</p></div>
+<div class="table-wrap"><table class="spec">
+<caption>Sapling 2.0 webbing lengths</caption>
+<thead><tr><th>Location</th><th class="num">Width</th><th>Finish</th><th>Elastic keeper</th><th class="num">Tolerance</th><th class="num">Length</th></tr></thead>
+<tbody>
+<tr><td>Load lifter straps</td><td class="num">20 mm</td><td>25 mm loop</td><td>No</td><td class="num">±10 mm</td><td class="num">350 mm</td></tr>
+<tr><td>Sternum strap</td><td class="num">20 mm</td><td>25 mm loop</td><td>No</td><td class="num">±10 mm</td><td class="num">250 mm</td></tr>
+<tr><td>Shoulder strap adjustment</td><td class="num">20 mm</td><td>25 mm loop</td><td>No</td><td class="num">±10 mm</td><td class="num">480 mm</td></tr>
+<tr><td>Waist belt</td><td class="num">38 mm</td><td>25 mm loop</td><td>No</td><td class="num">±10 mm</td><td class="num">280 mm</td></tr>
+<tr class="pick"><td>Child sternum strap<span class="flag">Tighter tolerance</span></td><td class="num">20 mm</td><td>25 mm loop</td><td>No</td><td class="num">±3 mm</td><td class="num">150 mm</td></tr>
+</tbody></table></div>
+<div class="figs">
+<Figure
+  src="/img/sapling-ctq-bartacks.jpg"
+  alt="CTQ page: checking for visible bartacks on the hipbelt, child seat adjuster and adjustment loops"
+  width={737} height={225} pad
+  caption="Visible bartacks that must be present on the exterior."
+/>
+<Figure
+  src="/img/sapling-ctq-inline.jpg"
+  alt="CTQ page: checking hidden bartacks on load lifters and 3x backtacks on side wings"
+  width={747} height={209} pad
+  caption="Inline checks for hidden bartacks and 3x backtacks."
+/>
+<Figure
+  src="/img/sapling-ctq-binding.jpg"
+  alt="CTQ page: binding orientation in the bottom compartment and back panel connector torque"
+  width={748} height={236} pad
+  caption="Binding orientation, and back panel connectors torqued to 3.5 ± 0.5 N·m."
+/>
+</div>
+</Section>
+
+<NextProject slot="next" from={project.slug} />
+</BaseLayout>
