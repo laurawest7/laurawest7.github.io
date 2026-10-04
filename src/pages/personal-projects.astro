@@ -90,8 +90,11 @@ const project = bySlug("personal-projects");
 
 <Section id="teddy-bears" title="Miniature Teddy Bears" meta="Soft toys">
 <div class="prose"><p>Two miniature teddy bears.</p></div>
-<div class="figs">
-<Figure src="/img/personal-bear-3.jpg" alt="Blue miniature teddy bear next to a soda can for scale" width={1600} height={1179} maxWidth="720px" />
+<!-- Column widths follow each photo's width-to-height ratio so all three line up at the same height. -->
+<div class="figs" style="grid-template-columns:1.278fr 1.372fr 0.737fr">
+<Figure src="/img/personal-bear-banana-1.jpg" alt="Blue miniature teddy bear standing beside a banana for scale" width={1600} height={1252} />
+<Figure src="/img/personal-bear-banana-2.jpg" alt="Blue miniature teddy bear sitting on a banana" width={1600} height={1166} />
+<Figure src="/img/personal-bear-banana-3.jpg" alt="Blue miniature teddy bear holding the stem of a banana" width={1179} height={1600} />
 </div>
 </Section>
 
