@@ -1,7 +1,7 @@
 ---
 interface Props {
-  /** Project pages mark Work as the current section; the home page does not. */
-  current?: "work";
+  /** Project pages mark Work as the current section, the About page marks About; the home page marks neither. */
+  current?: "work" | "about";
 }
 const { current } = Astro.props;
 ---
@@ -10,4 +10,5 @@ const { current } = Astro.props;
 <nav class="topnav" aria-label="Main">
 <a href="/#work" aria-current={current === "work" ? "page" : undefined}>Work</a>
 <a href="/#capabilities">Capabilities</a>
+<a href="/about/" aria-current={current === "about" ? "page" : undefined}>About</a>
 </nav></div></header>

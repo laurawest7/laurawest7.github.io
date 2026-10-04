@@ -11,14 +11,14 @@ const project = bySlug("verve-motion");
 <BaseLayout title={project.pageTitle} current="work">
 <ProjectHeader project={project} />
 
-<Section title="The suit" meta="4 main components · 3 auxiliary">
+<Section title="Components of the V4 Suit" meta="4 main components · 3 auxiliary">
 <div class="prose"><p>The V4 Safe Lift Suit has four main components and three small auxiliary components.</p></div>
 <div class="row" style="margin-top:2rem">
 <div>
 <Figure
   src="/img/verve-lift-side.jpg"
   alt="Worker lifting a box while wearing the Safe Lift Suit, side view"
-  width={332} height={547} maxWidth="420px"
+  width={979} height={1600} maxWidth="420px"
   rings={[{ n: "1", left: "66%", top: "21%" }]}
 />
 </div>
@@ -33,7 +33,7 @@ const project = bySlug("verve-motion");
 <Figure
   src="/img/verve-front.jpg"
   alt="Front view of the suit showing the shoulder straps"
-  width={234} height={376} maxWidth="360px"
+  width={994} height={1600} maxWidth="360px"
   rings={[{ n: "2", left: "36%", top: "42%" }]}
 >
   <Fragment slot="caption"><b>2</b> Shoulder straps detach from the back panel.</Fragment>
@@ -41,7 +41,7 @@ const project = bySlug("verve-motion");
 <Figure
   src="/img/verve-back.jpg"
   alt="Back view of the suit showing the thigh wraps and cording"
-  width={400} height={384} maxWidth="460px"
+  width={1407} height={1333} maxWidth="460px"
   rings={[{ n: "3", left: "29%", top: "87%" }]}
 >
   <Fragment slot="caption"><b>3–4</b> Thigh wraps with cording routed to the IMU units.</Fragment>
@@ -49,21 +49,45 @@ const project = bySlug("verve-motion");
 </div>
 </Section>
 
-<Section title="Hardware on the force path">
+<Section title="V4 Safelift" meta="2021–2025">
+<div class="figs two">
+<Figure src="/img/verve-v4-1.jpg" alt="Close-up of the V4 suit's back panel on a worker lifting a box" width={1600} height={1067} />
+<Figure src="/img/verve-v4-2.jpg" alt="Front view of the V4 suit's shoulder straps and controller" width={1600} height={1067} />
+<Figure src="/img/verve-v4-3.jpg" alt="Worker lifting a box while wearing the V4 suit" width={1067} height={1600} />
+<Figure src="/img/verve-v4-4.jpg" alt="Back view of a worker wearing the V4 suit" width={1600} height={1067} />
+</div>
+</Section>
+
+<Section title="V5 Safelift" meta="2026–Present">
+<div class="figs two">
+<Figure src="/img/verve-v5-1.jpg" alt="V5 suit back panel with HexArmor branding" width={1060} height={1060} />
+<Figure src="/img/verve-v5-2.jpg" alt="V5 suit controller on the shoulder strap" width={1060} height={1060} />
+<Figure src="/img/verve-v5-3.jpg" alt="Close-up of a V5 suit strap" width={1060} height={1060} />
+<Figure src="/img/verve-v5-4.jpg" alt="Back view of a person wearing the V5 suit" width={1060} height={1060} />
+</div>
+<figure style="margin-top:2rem">
+<div class="frame"><video src="/video/verve-v5-safelift.mp4" width="960" height="540" style="display:block;width:100%;height:auto" controls preload="metadata" playsinline aria-label="SafeLift powered exosuit video from HexArmor"></video></div>
+<figcaption>SafeLift powered exosuit, from HexArmor.</figcaption>
+</figure>
+</Section>
+
+<Section title="Development and Validation">
+<div class="prose" style="margin-bottom:3rem"><p>I set up a test lab at Verve to test the durability of our constructions. I set up and operated a force tester and Martindale abrasion testing machine, researched and quantified testing protocols and compared field wear to lab testing to validate those protocols.</p></div>
+<div class="subhead"><h3>Hardware on the force path</h3></div>
 <div class="prose"><p>Both of these fasteners sit on the force path of the suit, so a failure here is a failure of the product.</p></div>
 <div class="row" style="margin-top:2rem">
-<div class="prose"><h3>Shoulder strap to battery pod buckle</h3>
+<div class="prose"><h4>Shoulder strap to battery pod buckle</h4>
 <p>The male buckles have a secondary locking nub that nestles into a divot in the female buckle. I tested riveted and sewn samples to confirm that this locking feature actually increases the breaking strength of the connection.</p>
 <p>The locking nub broke off during testing. This was the common failure across all samples.</p></div>
 <Figure
   src="/img/verve-buckle-test.jpg"
   alt="Test slide showing riveted and sewn buckle samples and the broken locking nub"
-  width={729} height={369} pad
+  width={1600} height={790} pad
   caption="Riveted and sewn buckle samples after pull testing."
 />
 </div>
 <div class="row flip" style="margin-top:3rem">
-<div class="prose"><h3>Steel to aluminum G-hooks</h3>
+<div class="prose"><h4>Steel to aluminum G-hooks</h4>
 <p>G-hooks that had been in the field for a long time were rusting. The V4 and V4A hooks are powder-coated steel and rust when exposed to moisture or laundering. We wanted to switch to aluminum, which does not rust, but we were concerned about the tensile strength of the nominated part.</p>
 <p>Tensile testing confirmed the aluminum hook meets our spec. It is weaker than steel, but 400 N is still stronger than necessary.</p>
 <div class="table-wrap"><table class="spec">
@@ -76,13 +100,12 @@ const project = bySlug("verve-motion");
 <Figure
   src="/img/verve-ghook-test.jpg"
   alt="Rusted steel G-hooks next to aluminum and steel hooks after tensile testing"
-  width={727} height={333} pad
+  width={1600} height={715} pad
   caption="Rust on field-returned steel hooks, and both hook types after tensile testing."
 />
 </div>
-</Section>
 
-<Section title="Abrasion testing" meta="EN-388 · Martindale">
+<div class="subhead"><h3>Abrasion testing</h3><span class="meta">EN-388 · Martindale</span></div>
 <div class="prose"><p>The cover fabric was wearing through in the field. I ran abrasion tests using an adapted version of EN-388 on a Martindale abrasion tester to find a more durable replacement. After testing and inspection, we moved to 840D Nylon Cordura.</p>
 <p>The newest development wraps a composite material around the top of the device. Composites are generally more durable, but the choice of top, middle and bottom layers depends on the use case. I tested two varieties of X-Pac, a laminated composite with an internal Kevlar scrim.</p></div>
 <div class="table-wrap"><table class="spec">
@@ -99,13 +122,13 @@ const project = bySlug("verve-motion");
 <Figure
   src="/img/verve-abrasion-canvas.jpg"
   alt="Cover wear in the field and abrasion test swatches for three canvas materials"
-  width={719} height={376} pad
+  width={1600} height={837} pad
   caption="Cover canvas: field wear pattern and test swatches."
 />
 <Figure
   src="/img/verve-abrasion-xpac.jpg"
   alt="Field and drop test damage on ear wraps, and abrasion swatches for two X-Pac materials"
-  width={720} height={387} pad
+  width={1600} height={859} pad
   caption="Ear wraps: field and drop test damage, and X-Pac swatches."
 />
 </div>

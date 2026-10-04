@@ -8,7 +8,7 @@ interface Props {
   title: string;
   description?: string;
   /** Passed through to the top bar to mark the current section. */
-  current?: "work";
+  current?: "work" | "about";
 }
 const { title, description = SITE_DESCRIPTION, current } = Astro.props;
 ---
