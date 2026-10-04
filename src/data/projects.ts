@@ -88,7 +88,7 @@ export const projects: Project[] = [
   {
     slug: "thule-sapling",
     company: "Thule",
-    title: "Sapling child carrier",
+    title: "Sapling Child Carrier",
     pageTitle: "Thule Sapling · Laura West",
     lede: "The Sapling is a framed child carrier that combines injection molded parts, extruded aluminum profiles, apparel fabrics and technical fabrics.",
     spec: [
@@ -116,7 +116,7 @@ export const projects: Project[] = [
   {
     slug: "thule-approach",
     company: "Thule",
-    title: "Approach roof top tent",
+    title: "Approach Roof Top Tent",
     pageTitle: "Thule Approach · Laura West",
     lede: "Thule Approach is a redesigned roof top tent. My development work focused on the tent fabric: how it attaches to the hard base, how it comes off for cleaning, and how its seams hold up to weather.",
     spec: [
