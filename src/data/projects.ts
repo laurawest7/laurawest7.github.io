@@ -77,10 +77,10 @@ export const projects: Project[] = [
       tags: ["Injection Molding", "New Process Development", "Foam Molding", "Cut and Sew", "Technical Apparel Fabrics"],
       images: [
         {
-          src: "/img/trusst-illustration.jpg",
-          alt: "Cutaway illustration of the Trusst support structure",
-          width: 1500,
-          height: 1226,
+          src: "/img/trusst-card.jpg",
+          alt: "Trusst bras in black, black lace and nude laid out on a white surface",
+          width: 960,
+          height: 960,
         },
       ],
     },
