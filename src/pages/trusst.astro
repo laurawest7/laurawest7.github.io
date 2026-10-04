@@ -11,48 +11,48 @@ const project = bySlug("trusst");
 
 /** The six-step cup molding sequence; the caption number is the step. */
 const molding = [
-  { src: "/img/trusst-mold.jpg", alt: "Aluminum molds for the inner foam layer", width: 350, height: 263, n: "1", text: "Mold for the inner layer." },
-  { src: "/img/trusst-inner-molding.jpg", alt: "Inner foam layer in the press", width: 350, height: 263, n: "2", text: "Inner layer being molded." },
-  { src: "/img/trusst-place-structure.jpg", alt: "Worker placing the structure into the molded indentations", width: 350, height: 210, n: "3", text: "Structure placed in the formed indentations." },
-  { src: "/img/trusst-second-layer.jpg", alt: "Second foam layer being molded over the structure", width: 351, height: 211, n: "4", text: "Second foam layer molded over the first layer and structure." },
-  { src: "/img/trusst-molded-cup.jpg", alt: "Fully molded foam cup", width: 350, height: 211, n: "5", text: "Fully molded cup." },
-  { src: "/img/trusst-trim.jpg", alt: "Worker cutting molded cups to size", width: 352, height: 211, n: "6", text: "Cup cut to the size marked in the mold." },
+  { src: "/img/trusst-mold.jpg", alt: "Aluminum molds for the inner foam layer", width: 1600, height: 1200, n: "1", text: "Mold for the inner layer." },
+  { src: "/img/trusst-inner-molding.jpg", alt: "Inner foam layer in the press", width: 1600, height: 1200, n: "2", text: "Inner layer being molded." },
+  { src: "/img/trusst-place-structure.jpg", alt: "Worker placing the structure into the molded indentations", width: 1600, height: 950, n: "3", text: "Structure placed in the formed indentations." },
+  { src: "/img/trusst-second-layer.jpg", alt: "Second foam layer being molded over the structure", width: 1600, height: 945, n: "4", text: "Second foam layer molded over the first layer and structure." },
+  { src: "/img/trusst-molded-cup.jpg", alt: "Fully molded foam cup", width: 1600, height: 975, n: "5", text: "Fully molded cup." },
+  { src: "/img/trusst-trim.jpg", alt: "Worker cutting molded cups to size", width: 1600, height: 945, n: "6", text: "Cup cut to the size marked in the mold." },
 ];
 ---
 <BaseLayout title={project.pageTitle} current="work">
 <ProjectHeader project={project} />
 
-<Section title="The product">
+<Section title="The Product">
 <div class="row">
-<div class="prose"><p>The support structure is flexible, cantilevered and articulating. It is injection molded, then over-molded into a bra cup. The finished cups are assembled into the garment with specialty wicking fabrics to manage moisture.</p></div>
+<div class="prose"><p>We designed, tested and optimized a 3D structure that is integrated into molded foam cups and then sewn into a garment. The support structure is flexible, cantilevered and articulating. The materials for the garment are wicking and breathable to manage heat and moisture. The full SKU range encompasses 29 cup and band iterations.</p></div>
 <Figure
   src="/img/trusst-illustration.jpg"
   alt="Cutaway illustration of a Trusst bra showing the support structure inside the cup"
-  width={598} height={482}
+  width={1500} height={1226}
   caption="Cutaway showing the structure inside the cup."
 />
 </div>
 <div class="figs three">
-<Figure src="/img/trusst-model-1.jpg" alt="Model wearing a black Trusst bra with lace trim" width={221} height={271} />
-<Figure src="/img/trusst-model-2.jpg" alt="Model wearing a black lace Trusst bra" width={223} height={273} />
-<Figure src="/img/trusst-model-3.jpg" alt="Model wearing a nude Trusst bra" width={224} height={272} />
+<Figure src="/img/trusst-model-1.jpg" alt="Model wearing a black Trusst bra with lace trim" width={960} height={1200} />
+<Figure src="/img/trusst-model-2.jpg" alt="Model wearing a black lace Trusst bra" width={800} height={1000} />
+<Figure src="/img/trusst-model-3.jpg" alt="Model wearing a nude Trusst bra" width={800} height={1000} />
 </div>
 </Section>
 
-<Section title="Step 1 · Support structure design">
+<Section title="Step 1 · Support Structure Design">
 <div class="prose"><p>The structure had to support the breast from underneath and carry the weight to the core of the body, while staying flexible and comfortable as the body moves. We settled on an articulated, cantilevered design and refined it by iterating quickly through 3D printing before investing in injection molding tooling.</p>
 <p>We also tested several plastics, balancing flexibility against the heat resistance needed for washing and drying and overall durability. We chose a nylon.</p></div>
 <div class="figs two">
 <Figure
   src="/img/trusst-3d-printing.jpg"
   alt="Support structure printing on a 3D printer bed"
-  width={439} height={426}
+  width={750} height={726}
   caption="Sizes 1–3 printed together. Size 4 printed one side at a time to fit the small bed."
 />
 <Figure
   src="/img/trusst-pp-prints.jpg"
   alt="Close-up of 3D printed support structures in PP"
-  width={439} height={329}
+  width={1600} height={1200}
   caption="3D prints of structure sizes 1, 2 and 3 in PP."
 />
 </div>
@@ -71,7 +71,7 @@ const molding = [
 <Figure
   src="/img/trusst-structure.jpg"
   alt="Molded support structure with the size and logo marked"
-  width={383} height={259}
+  width={1600} height={1047}
   caption="Production structure. Size and logo are molded in."
 />
 </div>
@@ -79,13 +79,13 @@ const molding = [
 <Figure
   src="/img/trusst-structure-cutmarks.jpg"
   alt="Structure size 2 with red cut marks"
-  width={438} height={267}
+  width={1600} height={979}
   caption="Structure 2 with cut marks."
 />
 <Figure
   src="/img/trusst-die-cut.jpg"
   alt="Die-cut tool positioned on a support structure"
-  width={262} height={264}
+  width={918} height={912}
   caption="Die-cut tool placed on the structure."
 />
 <Figure
@@ -105,15 +105,15 @@ const molding = [
 </div>
 </Section>
 
-<Section title="Step 3 · Cut and sew">
+<Section title="Step 3 · Cut and Sew">
 <div class="row">
 <div class="prose"><p>Once the cups arrive at the sewing factory they are sewn into bras. The rigid structure inside makes sewing more physically demanding than a traditional underwire bra.</p>
 <p>The lace edges also meant pattern layout and markers had to be chosen carefully, and production workers were trained to place patterns for minimum waste.</p></div>
 <div class="figs two" style="margin-top:0">
-<Figure src="/img/trusst-sew-1.jpg" alt="Sewing a cup on an industrial machine" width={200} height={235} />
-<Figure src="/img/trusst-sew-2.jpg" alt="Sewing a structured cup" width={280} height={235} />
-<Figure src="/img/trusst-lace-1.jpg" alt="Placing paper patterns on lace" width={200} height={235} />
-<Figure src="/img/trusst-lace-2.jpg" alt="Laying out cup patterns on black lace" width={280} height={235} />
+<Figure src="/img/trusst-sew-1.jpg" alt="Sewing a cup on an industrial machine" width={1365} height={1600} />
+<Figure src="/img/trusst-sew-2.jpg" alt="Sewing a structured cup" width={1600} height={1350} />
+<Figure src="/img/trusst-lace-1.jpg" alt="Placing paper patterns on lace" width={1365} height={1600} />
+<Figure src="/img/trusst-lace-2.jpg" alt="Laying out cup patterns on black lace" width={1600} height={1350} />
 </div></div>
 <div style="margin-top:3rem">
 <Figure

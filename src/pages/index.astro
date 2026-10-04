@@ -5,32 +5,37 @@ import TitleBlock from "../components/TitleBlock.astro";
 import WorkCard from "../components/WorkCard.astro";
 import { projects } from "../data/projects";
 
-const caps: { heading: string; items: { slug: string; text: string }[] }[] = [
+/** Add a project slug to an item to link it to that project page. */
+const caps: { heading: string; items: { slug?: string; text: string }[] }[] = [
   {
-    heading: "Testing and validation",
+    heading: "Materials and construction",
     items: [
-      { slug: "verve-motion", text: "Tensile testing of force-path hardware" },
-      { slug: "verve-motion", text: "EN-388 abrasion on a Martindale tester" },
-      { slug: "thule-sapling", text: "Wear testing and root-cause analysis" },
-      { slug: "trusst", text: "Material selection for wash and dry durability" },
+      { text: "Material development" },
+      { text: "Prototyping" },
+      { text: "Patterning" },
+      { text: "Industrial sewing" },
+      { text: "Bonding" },
+      { text: "Soft and hard molding" },
     ],
   },
   {
-    heading: "Manufacturing",
+    heading: "Documentation and manufacturing",
     items: [
-      { slug: "trusst", text: "Injection molding tooling and over-molding" },
-      { slug: "trusst", text: "Foam cup molding and die-cut trimming" },
-      { slug: "trusst", text: "Cut and sew with structured components" },
-      { slug: "thule-approach", text: "Flat felled, seam-taped construction" },
+      { text: "Tech packs" },
+      { text: "Design for manufacturing" },
+      { text: "Supplier development" },
+      { text: "Supplier communication" },
+      { text: "Sourcing" },
+      { text: "Vendor qualification" },
     ],
   },
   {
-    heading: "Documentation and supply",
+    heading: "Validation and QA",
     items: [
-      { slug: "thule-sapling", text: "Critical to Quality documents for factory QC" },
-      { slug: "lasell-footwear", text: "Tech packs and FOB costing" },
-      { slug: "thule-sapling", text: "Costed options for late-stage fixes" },
-      { slug: "verve-motion", text: "Supplier collaboration on material changes" },
+      { text: "Material testing" },
+      { text: "Product testing" },
+      { text: "Quality improvement" },
+      { text: "CTQ documentation" },
     ],
   },
 ];
@@ -39,30 +44,29 @@ const caps: { heading: string; items: { slug: string; text: string }[] }[] = [
 <section class="mat"><div class="ruler"></div>
 <div class="wrap hero"><div class="hero-grid">
 <div>
-<p class="eyebrow">Product developer</p>
+<p class="eyebrow">Experienced Product Developer</p>
 <h1>Laura West</h1>
-<p class="lede">I develop soft goods that carry load: wearable robotics, technical carry and structured apparel.</p>
-<p>My work runs from prototyping and lab testing through supplier development, tech packs and production QC.</p>
+<p class="lede">Technical soft goods innovation, development and manufacturing.</p>
+<p>I operate at the intersection of textiles, soft composites, hard goods and electronics. I make ideas real through rapid iteration and hands on prototyping, translating design intent into validated manufactured product.</p>
 </div>
 <TitleBlock rows={[
-  ["Now", "Verve Motion, wearable robotics"],
-  ["Before", "Product Developer, Thule"],
-  ["Founded", "Trusst Lingerie"],
-  ["Materials", "Technical textiles, X-Pac, nylon, TPU, EVA and PU foams, aluminum"],
+  ["Now", "Verve Motion, Product Development Manager"],
+  ["Before", "Thule, Product Developer; Trusst Lingerie, Founder and Chief Product Officer"],
+  ["Education", "Carnegie Mellon, Industrial Design"],
 ]} />
 </div></div></section>
 
-<Section id="work" title="Selected work" meta={`${projects.length} projects`}>
+<Section id="work" title="Selected Work" meta={`${projects.length} projects`}>
 <div class="work">
 {projects.map((p) => <WorkCard project={p} />)}
 </div>
 </Section>
 
-<Section id="capabilities" title="Capabilities" meta="Drawn from the projects above">
+<Section id="capabilities" title="Capabilities">
 <div class="caps">
 {caps.map((group) => (
   <div class="cap"><h3>{group.heading}</h3><ul>
-  {group.items.map((item) => <li><a href={`/${item.slug}/`}>{item.text}</a></li>)}
+  {group.items.map((item) => <li>{item.slug ? <a href={`/${item.slug}/`}>{item.text}</a> : item.text}</li>)}
   </ul></div>
 ))}
 </div>
