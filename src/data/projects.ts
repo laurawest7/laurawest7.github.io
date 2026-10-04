@@ -128,7 +128,7 @@ export const projects: Project[] = [
     card: {
       co: "Thule · Product Developer",
       blurb: "A removable tent body on a zipper gimp, with flat felled, seam-taped seams.",
-      tags: ["Technical fabrics", "Seam taping", "Extrusions"],
+      tags: ["Industrial Sewing", "Material Development", "Soft and Hard Molding", "Product Testing"],
       contain: true,
       images: [
         {
