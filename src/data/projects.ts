@@ -101,7 +101,7 @@ export const projects: Project[] = [
       co: "Thule · Product Developer",
       blurb:
         "A washable child carrier compliant with international safety standards.",
-      tags: ["Wear testing", "Costing", "CTQ / QC"],
+      tags: ["CTQ", "Quality Improvement", "Supplier Communication", "Product Testing"],
       contain: true,
       images: [
         {
