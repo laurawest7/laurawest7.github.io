@@ -46,7 +46,7 @@ export const projects: Project[] = [
       co: "Verve Motion · Wearable robotics",
       blurb:
         "A powered suit that reduces strain on the lower back during lifting activities.",
-      tags: ["Material sourcing and testing", "Factory onboarding and quality improvement", "Continuous product innovation", "Team leadership"],
+      tags: ["Material Sourcing and Testing", "Factory Onboarding and Quality Improvement", "Continuous Product Innovation", "Team Leadership"],
       feature: true,
       images: [
         {
