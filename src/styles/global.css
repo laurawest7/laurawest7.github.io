@@ -238,6 +238,9 @@ h3, h4 {
 .figs { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); margin-top: 2rem; }
 .figs.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .figs.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.figs.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* Crop every image in the row to the same portrait shape so mixed orientations line up. */
+.figs.crop .frame img { aspect-ratio: 4 / 5; object-fit: cover; }
 .figs.split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
 figure { margin: 0; min-width: 0; }
 figure .frame { background: #fff; border: 1px solid var(--rule); position: relative; overflow: hidden; }
@@ -327,6 +330,7 @@ table.spec { border-collapse: collapse; width: 100%; font-size: 0.9rem; font-var
 @media (max-width: 620px) {
   .work, .figs.two, .options { grid-template-columns: minmax(0, 1fr); }
   .figs.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .figs.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
