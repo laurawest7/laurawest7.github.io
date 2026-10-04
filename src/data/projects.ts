@@ -148,10 +148,10 @@ export const projects: Project[] = [
     lede: "Projects I take on outside of my day job to learn new materials and processes.",
     /** One row per project on the page; add a row when you add a project. */
     spec: [
-      ["Reverse tech pack", "Lasell University, 2025"],
-      ["Felt rocketship", "Toy design"],
-      ["Teddy bears", "Soft toys"],
-      ["Wall hanging", "Knitting and weaving"],
+      ["Reverse Tech Pack", "Continued Learning"],
+      ["Felt Rocket Ship", "Learning Toy Design"],
+      ["Mini Teddy Bear", "Patterning for Small Scale"],
+      ["Knit Wall Hanging", "Material and Process Development"],
     ],
     card: {
       co: "Personal · Independent work",
