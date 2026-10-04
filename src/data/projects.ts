@@ -161,10 +161,10 @@ export const projects: Project[] = [
       contain: true,
       images: [
         {
-          src: "/img/lasell-views.jpg",
-          alt: "Technical drawings of a running shoe",
-          width: 1260,
-          height: 943,
+          src: "/img/lasell-construction.jpg",
+          alt: "Lateral view of the running shoe with construction callouts",
+          width: 1370,
+          height: 870,
         },
       ],
     },
