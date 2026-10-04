@@ -61,8 +61,8 @@ export const projects: Project[] = [
   {
     slug: "trusst",
     company: "Trusst Lingerie",
-    title: "Trusst support structure",
-    pageTitle: "Trusst · Laura West",
+    title: "Trusst Engineered Bra",
+    pageTitle: "Trusst Engineered Bra · Laura West",
     lede: "I co-founded Trusst Lingerie to design better bras for fuller-busted women. Existing bras don't fully support them: underwires cause pain and too much weight goes to the shoulder straps. We built a support system that moves the weight of a larger bust onto the core of the body.",
     spec: [
       ["Role", "Founder and Chief Product Officer"],
