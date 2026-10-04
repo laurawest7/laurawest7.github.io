@@ -157,7 +157,7 @@ export const projects: Project[] = [
       co: "Personal · Independent work",
       blurb:
         "Work outside my day job: a footwear reverse tech pack, a felt fastener toy, miniature teddy bears and a woven wall hanging.",
-      tags: ["Footwear", "Tech packs", "FOB costing"],
+      tags: ["Continued Learning", "Patterning", "Process Development", "Material Development"],
       contain: true,
       images: [
         {
