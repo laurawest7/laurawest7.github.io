@@ -100,7 +100,7 @@ export const projects: Project[] = [
     card: {
       co: "Thule · Product Developer",
       blurb:
-        "Finding a squeak in the frame late in sampling, and a 95-item Critical to Quality document for production.",
+        "A washable child carrier compliant with international safety standards.",
       tags: ["Wear testing", "Costing", "CTQ / QC"],
       contain: true,
       images: [
