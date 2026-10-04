@@ -45,7 +45,7 @@ export const projects: Project[] = [
     card: {
       co: "Verve Motion · Wearable robotics",
       blurb:
-        "Led product development on the V4 and V5 Safelift suits, from material testing and supplier changes to factory onboarding and team leadership.",
+        "A powered suit that reduces strain on the lower back during lifting activities.",
       tags: ["Material sourcing and testing", "Factory onboarding and quality improvement", "Continuous product innovation", "Team leadership"],
       feature: true,
       images: [
