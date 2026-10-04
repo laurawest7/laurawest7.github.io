@@ -74,7 +74,7 @@ export const projects: Project[] = [
       co: "Trusst Lingerie · Co-founder",
       blurb:
         "A cantilevered nylon structure, over-molded into foam cups, that moves bust weight off the shoulders.",
-      tags: ["Injection molding", "Foam cup molding", "Cut and sew"],
+      tags: ["Injection Molding", "New Process Development", "Foam Molding", "Cut and Sew", "Technical Apparel Fabrics"],
       images: [
         {
           src: "/img/trusst-illustration.jpg",
