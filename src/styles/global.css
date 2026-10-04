@@ -240,7 +240,7 @@ h3, h4 {
 .figs.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .figs.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 /* Crop every image in the row to the same portrait shape so mixed orientations line up. */
-.figs.crop .frame img { aspect-ratio: 4 / 5; object-fit: cover; }
+.figs.crop .frame :is(img, video) { aspect-ratio: var(--crop, 4 / 5); object-fit: cover; }
 .figs.split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
 figure { margin: 0; min-width: 0; }
 figure .frame { background: #fff; border: 1px solid var(--rule); position: relative; overflow: hidden; }
