@@ -13,7 +13,7 @@ const project = bySlug("personal-projects");
 <BaseLayout title={project.pageTitle} current="work">
 <ProjectHeader project={project} />
 
-<!-- Each project starts with an intro Section like this one, followed by its own Sections. -->
+<!-- Each project is one Section; use a subhead div for headings inside it. -->
 <Section id="reverse-tech-pack" title="Reverse tech pack" meta="Lasell University · Footwear">
 <div class="row">
 <div class="prose"><p>I wanted a deeper understanding of soft and hard material manufacturing in footwear, so I took the Lasell Professional Development Footwear Product Development course, taught by Elizabeth Brock-Jones, Principal Innovator at Nike. I received an A. The final assignment was a reverse tech pack of a women's running shoe.</p></div>
@@ -24,9 +24,8 @@ const project = bySlug("personal-projects");
   ["Completed", "Nov 4, 2025"],
 ]} />
 </div>
-</Section>
 
-<Section title="Marketing brief">
+<div class="subhead"><h3>Marketing brief</h3></div>
 <Stats items={[
   { v: "$70", k: "Retail price" },
   { v: "$14", k: "Target FOB" },
@@ -54,18 +53,16 @@ const project = bySlug("personal-projects");
   caption="Marketing brief page."
 />
 </div>
-</Section>
 
-<Section title="Materials and construction">
+<div class="subhead"><h3>Materials and construction</h3></div>
 <Figure
   src="/img/lasell-construction.jpg"
   alt="Lateral view of the shoe with construction callouts"
   width={1370} height={870} pad
   caption="Callouts cover the molded 1 mm TPU vamp overlay, the compression-molded heel overlay over 5 mm EVA, the debossed logo on the U-throat and the 2 mm perimeters on overlays."
 />
-</Section>
 
-<Section title="Views and pattern">
+<div class="subhead"><h3>Views and pattern</h3></div>
 <Figure
   src="/img/lasell-views.jpg"
   alt="Top, lateral, medial, heel and bottom views of the shoe"
